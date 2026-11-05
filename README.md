@@ -120,11 +120,9 @@ repository.
   `claude plugin validate`, which covers the manifest and the craft skills of
   `craft/`. It skips when Claude Code is not installed.
 
-`GROVE_COMMIT` names Grove commit `c800d311a541b02237f06b5a9b5ddba4c2993765`,
-which still ships Grove's own copies of the kind skills. With that commit, the
-pack passes alone. The aggregate fails, because it reads each design kind and
-each moved rule twice. A later commit of this pack names the Grove commit that
-removes Grove's copies, and its aggregate passes.
+`GROVE_COMMIT` names Grove commit `84fba18c1f98b694bcf440181c3853a6ec343772`,
+which removed Grove's own copies of these skills. The pack passes alone, and
+the aggregate reads each design kind and each moved rule once.
 
 ## Provenance
 
@@ -157,6 +155,10 @@ it. The move made these changes:
   `plugins/linkuistics/PROVENANCE.md` for the craft skills. The section of
   `model-led-development` names Grove's repository and its public URLs where
   the source said "this repository".
+
+Grove commit `84fba18c1f98b694bcf440181c3853a6ec343772` removed Grove's copies
+of these files. `GROVE_COMMIT` names that commit, so the aggregate check reads
+each design kind once.
 
 `decision-records` adapts passages of
 [mattpocock/skills](https://github.com/mattpocock/skills), which uses the MIT
