@@ -1,0 +1,23 @@
+# The rules that the files of the design pack own, as data.
+#
+# Grove's `plugins/grove/conformance/rules.tsv` states the five tab-separated
+# columns: rule, owner, class, load and phrase. Grove's
+# `docs/specs/external-pack-contract.md`, "Conformance", states what a run
+# checks with this manifest alone and in the aggregate with core.
+#
+# Each owner is a file that this pack ships. A rule ID is unique across this
+# manifest and every manifest that a run supplies. The conformance runner reads
+# only `skills/`, so no row has an owner in `craft/`.
+#
+# The last row pins a citation of a craft skill. `grove-design/SKILL.md` names
+# the `codebase-design` skill and states what binds without it. Grove's
+# `docs/specs/pack-membership.md`, "The Grove tests that name moving kinds",
+# moved that row here from the citation registry of Grove's
+# `crates/grove/tests/plugin_fallback.rs`.
+design-deliverable	grove-design/SKILL.md	B	static({design})	
+design-does-not-cut-impl-leaves	grove-design/SKILL.md	B	static({design})	
+visual-design-default	grove-design/SKILL.md	B	static({design})	Use highly visual documents as the default working surface for design discussions
+visual-design-editable-source	grove-design/references/visual-design-discussion.md	B	static({design})	Keep source as the editable artifact
+visual-design-browser-url	grove-design/references/visual-design-discussion.md	B	static({design})	Serve the visual document at a stable browser URL
+visual-design-information-prerequisites	grove-design/references/visual-design-discussion.md	B	static({design})	For each decision node, identify the information needed to decide
+design-cites-codebase-design-with-fallback	grove-design/SKILL.md	B	static({design})	Grove's artifact requirements remain binding when the skill is absent

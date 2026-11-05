@@ -1,0 +1,37 @@
+---
+name: grove-design
+description: The `design` session kind — given requirements, establish how, and deliver a spec, an ADR set, or both. Use when a grove mandate names this skill, or when running a `design` session in a grove working tree.
+harnesses: [any]
+---
+
+# design
+
+**Load the `grove` skill now.** It is the shared spine and holds everything
+this kind does not own: the constraints, the bootstrap, and the execute,
+decompose, retire and commit procedures. `grove` is the bare skill name. If your
+harness requires a plugin namespace, use the namespace under which `grove` is
+actually installed. Do not assume one. If you cannot find or read the `grove`
+skill, follow the launch prompt's rule for a missing kind skill. What follows is
+`design`'s, and is stated nowhere else.
+
+**design** (AFK) — given requirements, establish *how*. The deliverable is a
+spec, an ADR set, or both. A `design` session that finds itself cutting
+*implementation* leaves has drifted into planning's job and should externalize
+a `planning` leaf instead.
+
+For software interfaces, state, or test seams, use the `codebase-design` skill
+when available. Fit its design
+evidence into the spec or ADRs; Grove's artifact requirements remain binding
+when the skill is absent.
+
+## Visual design discussion
+
+Use highly visual documents as the default working surface for design
+discussions. Choose the question and abstraction level, then the notation and
+renderer. Read `references/visual-design-discussion.md` for the notation palette,
+presenting editable diagrams at a browser URL, and keeping the
+visual document consistent with the design's decisions. Organize it by topic,
+make the current discussion and changed diagrams visible, and link the exact
+view being discussed. In document and conversational change lists, pair each
+changed diagram or prose section's descriptive stable link with a brief sentence
+about its actual change; the guide defines this format.
